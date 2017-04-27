@@ -1,7 +1,7 @@
 
-Parse.Cloud.define('prayer', function(req, res) {
-
-  var prayerurl = 'http://api.aladhan.com/calendar?latitude=23.8103&longitude=90.4125&timezonestring=Asia%2FDhaka&method=2&month=05&year=2017';
+Parse.Cloud.define('prayer', function(request, res) {
+  
+  var prayerurl = 'http://api.aladhan.com/calendar?latitude='+parseFloat(request.params.lat)+'&longitude='+parseFloat(request.params.lon)+'&timezonestring='+request.params.continent+'%2F'+request.params.city+'&method='+parseFloat(request.params.method)+'&month='+request.params.month+'&year='+request.params.year;
    var header = { 'Content-Type': 'application/x-www-form-urlencoded' }
    console.log(prayerurl);
   Parse.Cloud.httpRequest({
