@@ -12,7 +12,8 @@ if (!databaseUri) {
 }
 
 var api = new ParseServer({
-  databaseURI: databaseUri || 'mongodb://127.0.0.1:27017/faithbackend',
+ // databaseURI: databaseUri || 'mongodb://127.0.0.1:27017/faithbackend',
+         databaseURI: databaseUri ||'mongodb://root:1234567@ds139430.mlab.com:39430/faithbackend',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
   appId: process.env.APP_ID || 'final',
   masterKey: process.env.MASTER_KEY || 'backend', //Add your master key here. Keep it secret!
