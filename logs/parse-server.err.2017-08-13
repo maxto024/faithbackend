@@ -1,0 +1,2 @@
+{"error":{"code":141,"message":"Invalid function: \"asmaAlHusna\""},"level":"error","message":"Error handling request: ParseError { code: 141, message: 'Invalid function: \"asmaAlHusna\"' }","timestamp":"2017-08-13T13:48:57.730Z"}
+{"code":141,"message":"Invalid function: \"asmaAlHusna\"","level":"error","timestamp":"2017-08-13T13:48:57.732Z"}

@@ -27,6 +27,28 @@ console.log(month,year);
 });
 
 
+Parse.Cloud.define('asmaAlHusna', function(request, res) {
+
+  var prayerurl = 'http://api.aladhan.com/asmaAlHusna'
+   var header = { 'Content-Type': 'application/x-www-form-urlencoded' }
+   console.log(prayerurl);
+  Parse.Cloud.httpRequest({
+        method: 'GET',
+        url: prayerurl,
+        headers: header,
+    }).then(function (httpResponse) {
+            console.log("done")
+          console.log(httpResponse.data)
+        res.success(httpResponse.data);
+    }, function (httpResponse) {
+        console.log(httpResponse.data);
+        res.error(httpResponse.data);
+    });
+
+
+});
+
+
 Parse.Cloud.define('mosques', function(request, res) {
 
     
